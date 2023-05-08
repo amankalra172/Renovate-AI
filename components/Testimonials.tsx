@@ -96,7 +96,7 @@ export function Testimonials() {
                     key={testimonialIndex}
                     className="hover:scale-105 transition duration-300 ease-in-out "
                   >
-                    <a href={testimonial.link} target="_blank" rel="noreferrer">
+                    <a>
                       <figure className="relative rounded-2xl bg-gray-600 p-6 shadow-xl shadow-slate-900/10">
                         <blockquote className="relative">
                           <p className="text-lg tracking-tight text-white">
