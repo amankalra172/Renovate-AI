@@ -39,7 +39,7 @@ export default function Dashboard({ rooms }: { rooms: Room[] }) {
         ) : (
           <p className="text-gray-300">
             Browse through your previous room generations below. Any feedback?
-            Email hassan@roomgpt.io
+            Email hi@amankalra.com
           </p>
         )}
         {rooms.map((room) => (

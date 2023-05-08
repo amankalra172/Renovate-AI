@@ -155,7 +155,7 @@ export default function Pricing() {
       </ul>
       <p className="text-gray-400 mb-5">
         Interested in team pricing or have any pricing questions? Email{" "}
-        <span className="text-gray-300">hassan@roomgpt.io</span>
+        <span className="text-gray-300">hi@amankalra.com</span>
       </p>
       <Footer />
     </div>

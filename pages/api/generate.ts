@@ -38,7 +38,7 @@ export default async function handler(
   });
 
   // Check if user has any credits left
-  if (user?.credits === 1) {
+  if (user?.credits === 0) {
     return res.status(400).json(`You have no generations left`);
   }
 

@@ -67,7 +67,7 @@ const Home: NextPage = () => {
     },
     // make this emainingGenerations === 0 when testing is done.
     onValidate: async (file: File): Promise<undefined | string> => {
-      return data.remainingGenerations === 1
+      return data.remainingGenerations === 0
         ? `No more credits left. Buy more above.`
         : undefined;
     },
