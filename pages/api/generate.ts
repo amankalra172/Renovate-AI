@@ -72,12 +72,13 @@ export default async function handler(
         },
         body: JSON.stringify({
           version:
-            "8ebda4c70b3ea2a2bf86e44595afb562a2cdf85525c620f1671a78113c9f325b",
+            "d55b9f2dcfb156089686b8f767776d5b61b007187a4e1e611881818098100fbb",
           input: {
             image: imageUrl,
             structure: "hough",
             prompt: prompt,
             scale: 9,
+            steps: 10,
             a_prompt:
               "best quality, photo from Pinterest, interior, cinematic photo, ultra-detailed, ultra-realistic, award-winning, interior design, natural lighting",
             n_prompt:
