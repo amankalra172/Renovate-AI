@@ -39,3 +39,6 @@ next-env.d.ts
 
 # Scripts
 getUsersEmails.ts
+node_modules
+node_modules
+node_modules
