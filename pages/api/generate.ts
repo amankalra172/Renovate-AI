@@ -38,7 +38,7 @@ export default async function handler(
   });
 
   // Check if user has any credits left
-  if (user?.credits === 0) {
+  if (user?.credits === 1) {
     return res.status(400).json(`You have no generations left`);
   }
 
@@ -107,7 +107,7 @@ export default async function handler(
       let jsonFinalResponse = await finalResponse.json();
 
       if (jsonFinalResponse.status === "succeeded") {
-        generatedImage = jsonFinalResponse.output[1] as string;
+      generatedImage = jsonFinalResponse.output[0] as string;
       } else if (jsonFinalResponse.status === "failed") {
         break;
       } else {

@@ -65,8 +65,9 @@ const Home: NextPage = () => {
         shade900: "#ffff", // Various (draggable crop buttons, etc.)
       },
     },
+    // make this emainingGenerations === 0 when testing is done.
     onValidate: async (file: File): Promise<undefined | string> => {
-      return data.remainingGenerations === 0
+      return data.remainingGenerations === 1
         ? `No more credits left. Buy more above.`
         : undefined;
     },
@@ -126,7 +127,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>RoomGPT</title>
+        <title>Renovate AI</title>
       </Head>
       <Header
         photo={session?.user?.image || undefined}
@@ -138,9 +139,9 @@ const Home: NextPage = () => {
             href="/buy-credits"
             className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 hover:scale-105 transition"
           >
-            Pricing is now available.{" "}
-            <span className="font-semibold text-gray-200">Click here</span> to
-            buy credits!
+            You are low on credits, {" "}
+            <span className="font-semibold text-gray-200">reload your credits</span> 
+            {" "} here!
           </Link>
         ) : (
           <a
@@ -150,12 +151,12 @@ const Home: NextPage = () => {
             className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
           >
             Over{" "}
-            <span className="font-semibold text-gray-200">1 million users</span>{" "}
-            have used roomGPT so far
+            <span className="font-semibold text-gray-200">10,000 users </span>{" "}
+            have reimagined their dream house.
           </a>
         )}
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+         Create your <span className="text-blue-600">dream</span> space
         </h1>
         {status === "authenticated" && data && !restoredImage && (
           <p className="text-gray-400">
@@ -229,7 +230,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Choose your room theme.
+                        Choose your favorite theme.
                       </p>
                     </div>
                     <DropDown
@@ -277,9 +278,7 @@ const Home: NextPage = () => {
                 !originalPhoto && (
                   <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
                     <div className="max-w-xl text-gray-300">
-                      Sign in below with Google to create a free account and
-                      redesign your room today. You will get 3 generations for
-                      free.
+                      Get started for free with you Google account. {" "} First three credits fare on us!
                     </div>
                     <button
                       onClick={() => signIn("google")}
@@ -366,7 +365,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-blue-500 rounded-full text-white font-medium px-4 py-2 mt-8 hover:bg-blue-500/80 transition"
                   >
-                    Generate New Room
+                    Generate New!
                   </button>
                 )}
                 {restoredLoaded && (
@@ -379,7 +378,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-white rounded-full text-black border font-medium px-4 py-2 mt-8 hover:bg-gray-100 transition"
                   >
-                    Download Generated Room
+                    Download   
                   </button>
                 )}
               </div>
